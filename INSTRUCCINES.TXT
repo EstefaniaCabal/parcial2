@@ -1,0 +1,38 @@
+
+PS C:\trabajos\ejemplo7> NPM I --SAVE FIREBASE
+npm install @angular/fire
+
+ir a firebase -> ajustes de proyecto -> 
+
+ng generate enviroments
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAdYQhf_yVCvDCNKLuwiEixTRAIA1uoNnI",
+  authDomain: "libros-b16f2.firebaseapp.com",
+  projectId: "libros-b16f2",
+  storageBucket: "libros-b16f2.firebasestorage.app",
+  messagingSenderId: "295895006070",
+  appId: "1:295895006070:web:4b28cd46c5f85be36f5857"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);x
+
+envoriment.development.ts ----------------
+export const envoriment={
+    production: false,
+    firebaseConfig : {
+  apiKey: "AIzaSyAdYQhf_yVCvDCNKLuwiEixTRAIA1uoNnI",
+  authDomain: "libros-b16f2.firebaseapp.com",
+  projectId: "libros-b16f2",
+  storageBucket: "libros-b16f2.firebasestorage.app",
+  messagingSenderId: "295895006070",
+  appId: "1:295895006070:web:4b28cd46c5f85be36f5857"
+}
+};
