@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
-    background-color: #33475b;
+    background-color: #f8f9fa;
 }
 
 h1 {
@@ -17,9 +17,14 @@ h4 {
     margin-bottom: 15px;
 }
 
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .col-sm-4 {
     max-width: 400px;
-    margin: auto;
     background: white;
     padding: 20px;
     border-radius: 10px;

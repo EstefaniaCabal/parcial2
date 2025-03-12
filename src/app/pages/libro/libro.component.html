@@ -2,7 +2,6 @@
 
     <h1>Catalogo de Libros</h1>
 
-    <h4>Alta de Libros</h4>
 
     <div class="col-sm-4">
         <p>
@@ -22,7 +21,7 @@
         </p>
         <p>
             <label>Año de publicación</label>
-            <input type="text" class="form-control" 
+            <input type="number" class="form-control" 
                 [(ngModel)]="libro.anioPublicacion" required/>
         </p>
         <table>
@@ -54,7 +53,6 @@
                 <th>Editorial</th>
                 <th>Año de publicación</th>
         </thead>
-        </table>
         <tbody>
             @for(libro of libros;track libro.id){
                 <tr>
@@ -69,4 +67,6 @@
                 </tr>
             }
         </tbody>
+    </table>
+
 </div>

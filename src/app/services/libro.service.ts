@@ -45,6 +45,8 @@ export class LibroService {
   eliminarLibro(libro: Libro){
     const documentRef = doc(this.db, 'libros', libro.id);
     deleteDoc(documentRef);
+    alert("Registro eliminado correctamente");
+
   }
 }
 

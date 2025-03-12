@@ -1,0 +1,65 @@
+<div style="margin: 20px;">
+
+    <h1>Catalogo de Peliculas</h1>
+
+
+    <div class="col-sm-4">
+        <p>
+            <label>Nombre del material</label>
+            <input type="text" class="form-control" 
+                [(ngModel)]="cinema.nombre" required/>
+        </p>
+        <p>
+            <label>Año de lanzamiento</label>
+            <input type="number" class="form-control" 
+                [(ngModel)]="cinema.anio" required/>
+        </p>
+        <p>
+            <label>Productor</label>
+            <input type="text" class="form-control" 
+                [(ngModel)]="cinema.productor" required/>
+        </p>
+        <table>
+            <tr>
+                <td>
+                    <button class="btn btn-primary" 
+                        (click)="this.insertarCinema()">Insertar</button>
+                </td>
+                <td>
+                    <button class="btn btn-warning" 
+                        (click)="this.updateCinema()">Actualizar</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger" 
+                        (click)="this.deleteCinema()">Eliminar</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <hr />
+    <p></p>
+    <h4>Listado de Libros</h4>
+    <table class="table">
+        <thead>
+                <th>Titulo</th>
+                <th>Productor</th>
+                <th>Año</th>
+                <th>Seleccionar</th>
+        </thead>
+        <tbody>
+            @for(cinema of cinemas;track cinema.id){
+                <tr>
+                    <td>{{cinema.nombre}}</td>
+                    <td>{{cinema.productor}}</td>
+                    <td>{{cinema.anio}}</td>
+                    <td>
+                        <button class="btn btn-primary" 
+                            (click)="selectCinema(cinema)">Seleccionar</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
